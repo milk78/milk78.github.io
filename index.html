@@ -327,17 +327,25 @@
 
       
         
-          <h1 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h1><ul>
+          
+            <h1 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h1><ul>
 <li>Termux    <a href="https://www.coolapk.com/apk/com.termux" target="_blank" rel="noopener">酷安下载</a>   <a href="https://play.google.com/store/apps/details?id=com.termux" target="_blank" rel="noopener">Google Play</a></li>
 <li>MT管理器    <a href="https://www.coolapk.com/apk/bin.mt.plus" target="_blank" rel="noopener">酷安下载</a>   <a href="https://play.google.com/store/apps/details?id=bin.mt.plus" target="_blank" rel="noopener">Google Play</a></li>
 </ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/05/从0开始在Android上搭建Hexo博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pkg install coreutils        #安装一些基本工具 </span><br><span class="line">$ pkg install git                  #安装git </span><br><span class="line">$ pkg install nodejs           #安装node.js</span><br></pre></td></tr></table></figure>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g   #下载安装hexo</span><br><span class="line">$ mkdir hexo       #创建博客文件夹</span><br><span class="line">$ cd hexo    #进入博客文件夹</span><br><span class="line">$ hexo init       #初始化博客</span><br><span class="line">$ npm install hexo-deployer-git --save   #安装插件</span><br></pre></td></tr></table></figure>
+<h1 id="部署至GitHub"><a href="#部署至GitHub" class="headerlink" title="部署至GitHub"></a>部署至GitHub</h1><h3 id="注册GitHub账号"><a href="#注册GitHub账号" class="headerlink" title="注册GitHub账号"></a>注册GitHub账号</h3><p>访问<a href="https://github.com/" target="_blank" rel="noopener">GitHub官网</a>注册账号</p>
+<h3 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h3><p>创建一个名为 <code>你的用户名.github.io</code> 的repository，例如 milk78.github.io</p>
+<h3 id="编辑站点配置文件"><a href="#编辑站点配置文件" class="headerlink" title="编辑站点配置文件"></a>编辑站点配置文件</h3><p>   打开MT管理器进入</p>
+<blockquote>
+<p>/data/data/com.termux/files/home/hexo<br>  找到 <code>_config.yml</code> 文件，修改末段为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: #你项目的https链接地址，如https://github.com/milk78/milk78.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>  注意冒号后有一个空格</p>
+<h3 id="执行指令"><a href="#执行指令" class="headerlink" title="执行指令"></a>执行指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  #清除缓存文件</span><br><span class="line">$ hexo g   #生成静态文件</span><br><span class="line">$ hexo d    #部署至仓库</span><br><span class="line">#然后输入GitHub用户名和密码即可</span><br></pre></td></tr></table></figure>
+<hr>
+<p>本文参考了<br>在Android上搭建hexo博客<a href="http://www.wack1024.com/index.php/others/31.html" target="_blank" rel="noopener">http://www.wack1024.com/index.php/others/31.html</a><br>Android手机上部署Hexo博客.<a href="https://www.armeo.top/2018/04/12/Android%E9%83%A8%E7%BD%B2Hexo%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">https://www.armeo.top/2018/04/12/Android%E9%83%A8%E7%BD%B2Hexo%E5%8D%9A%E5%AE%A2/</a></p>
+
+          
         
       
     </div>
